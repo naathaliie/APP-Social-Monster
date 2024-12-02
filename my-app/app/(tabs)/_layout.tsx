@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { Pressable } from "react-native";
 
+/**********ALLA FILER DU LÄGGER I MAPPEN (TABS) KOMMER ATT BLI TILL EN TAB**********/
+
 export default function TabsLayout() {
   //För att kunna använda expo-router
   const router = useRouter();
@@ -37,6 +39,9 @@ export default function TabsLayout() {
             </Pressable>
           ),
           headerShown: true,
+          contentStyle: {
+            padding: 20,
+          },
         }}
       >
         <Tabs.Screen

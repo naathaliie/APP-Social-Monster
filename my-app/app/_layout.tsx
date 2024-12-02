@@ -3,6 +3,8 @@ import { Stack } from "expo-router";
 import { PaperProvider } from "react-native-paper";
 import { Provider } from "react-redux";
 
+/**********ALLA FILER DU LÄGGER I MAPPEN app KOMMER ATT BLI TILL EN "SCREEN"**********/
+
 export default function RootLayout() {
   return (
     <Provider store={store}>
