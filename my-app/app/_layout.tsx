@@ -7,7 +7,7 @@ export default function RootLayout() {
   return (
     <Provider store={store}>
       <PaperProvider>
-        <Stack>
+        <Stack screenOptions={{}}>
           {/* Första skärmen - index */}
           <Stack.Screen
             name="index"
@@ -15,21 +15,21 @@ export default function RootLayout() {
               headerShown: false,
             }}
           />
-          {/* Väg till chooseProfileScreen */}
+          {/* Andra skärmen - chooseProfileScreen  */}
           <Stack.Screen
             name="chooseProfileScreen"
             options={{
               headerShown: false,
             }}
           />
+          {/* Här kommer själva "appen" */}
           <Stack.Screen
             name="(tabs)"
             options={{
-              headerTitle: "monsterAppen",
               headerShown: false,
             }}
           />
-
+          {/* Fallback sidan om något skulle gå fel */}
           <Stack.Screen
             name="+not-found"
             options={{
