@@ -20,9 +20,10 @@ export default function TabsLayout() {
         }}
       >
         <Tabs.Screen
-          name="index"
+          name="homeScreen"
           options={{
             headerTitle: "Monster Appen",
+            tabBarLabel: "Hem",
             tabBarIcon: ({ color, focused }) => (
               <Ionicons
                 name={focused ? "home" : "home-outline"}
@@ -36,6 +37,7 @@ export default function TabsLayout() {
           name="myPage"
           options={{
             headerTitle: "Mina sidor",
+            tabBarLabel: "Mina sidor",
             tabBarIcon: ({ color, focused }) => (
               <Ionicons
                 name={focused ? "person" : "person-outline"}
@@ -45,7 +47,6 @@ export default function TabsLayout() {
             ),
           }}
         />
-        <Tabs.Screen name="+not-found" />
       </Tabs>
     </>
   );
