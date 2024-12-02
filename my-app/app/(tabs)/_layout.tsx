@@ -47,6 +47,7 @@ export default function TabsLayout() {
             ),
           }}
         />
+        <Tabs.Screen name="allProfiles" />
       </Tabs>
     </>
   );
