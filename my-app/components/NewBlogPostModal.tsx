@@ -1,10 +1,10 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 import { Modal, Portal, Text, TextInput } from "react-native-paper";
-import CustomButton from "./CustomButton";
 import { onePost } from "@/types";
 import { useDispatch } from "react-redux";
 import { addPost } from "@/redux/postSlice";
+import CustomButton from "./CustomButton";
 
 /**********PLACERA DENNA MODAL FRISTÅENDE LÄNGST UPP I KOMPONENTEN DU VILL ANVÄNDA DEN I (INTE INUTI TEX EN <VIEW></VIEW>)**********/
 

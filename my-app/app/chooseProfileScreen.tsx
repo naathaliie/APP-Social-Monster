@@ -7,6 +7,7 @@ import { RootState } from "@/redux/store";
 import UserIcon from "@/components/UserIcon";
 import { GuestUser, OneMonster } from "@/types";
 import CustomButton from "@/components/CustomButton";
+import { useRouter } from "expo-router";
 
 type ChooseYourProfileProps = {
   setShowChooseYourProfile: (value: boolean) => void; // Funktion som tar en boolean och returnerar void
@@ -23,6 +24,9 @@ export default function ChooseYourProfile({
     color: "none",
     image: "GuestUser.png",
   });
+
+  //För att kunna använda expo-router
+  const router = useRouter();
 
   //Använda egen Hook för att kunna spara vald pmonsterprofil
   const setChoosenUser = useSetChoosenUser();
@@ -65,7 +69,9 @@ export default function ChooseYourProfile({
           color="primary"
           shape="square"
           size="large"
-          onPress={() => setShowChooseYourProfile(false)}
+          onPress={() => {
+            router.push("/(tabs)/homeScreen");
+          }}
         />
         <Text style={styles.infoText}>
           Du kan ändra monster i inloggat läge under monsterprofiler

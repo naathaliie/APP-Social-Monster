@@ -18,7 +18,7 @@ export default function IndexScreen() {
       <Pressable
         style={styles.btn}
         onPress={() => {
-          router.push("/screens/chooseProfileScreen");
+          router.push("/chooseProfileScreen");
         }}
       >
         <Text style={styles.btnText}>Gå till appen</Text>

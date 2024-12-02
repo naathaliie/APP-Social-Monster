@@ -12,7 +12,6 @@ export function useSetChoosenUser() {
   return function (oneMonster: OneMonster) {
     if (oneMonster) {
       dispatch(updateCurrentUser(oneMonster));
-      console.log("Du valde ett monster ", oneMonster.name);
     } else {
       console.error("MonsterProfilen hittades inte");
     }
