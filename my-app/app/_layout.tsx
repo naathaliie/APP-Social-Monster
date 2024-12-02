@@ -7,18 +7,16 @@ export default function RootLayout() {
         name="(tabs)"
         options={{
           headerTitle: "monsterAppen",
-          headerLeft: () => <></>,
+          headerShown: false,
         }}
       />
-      {/*       <Stack.Screen
-        name="myPage"
+
+      <Stack.Screen
+        name="+not-found"
         options={{
-          headerTitle: "Mina sidor",
+          headerShown: false,
         }}
       />
-      VI FLYTTADE DENNA TILL TABS FÖR ATT GÖRA DEN TILL EN TAB ISTÄLLET
- */}{" "}
-      <Stack.Screen name="+not-found" />
     </Stack>
   );
 }
