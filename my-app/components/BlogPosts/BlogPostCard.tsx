@@ -1,6 +1,6 @@
 import { onePost } from "@/types";
 import { Image } from "expo-image";
-import { useNavigation } from "expo-router";
+import { useRouter } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 type BlogPostCardProps = {
@@ -9,7 +9,7 @@ type BlogPostCardProps = {
 };
 
 export default function BlogPostCard({ onePost, overView }: BlogPostCardProps) {
-  const navigation = useNavigation(); // Hämta navigation-objektet från useNavigation
+  const router = useRouter();
 
   //Switch för att få ut bilder
   function getimage(image: string) {
@@ -27,6 +27,12 @@ export default function BlogPostCard({ onePost, overView }: BlogPostCardProps) {
 
   function readThisPost() {
     console.log("du klickade på readThisPost");
+    router.push({
+      pathname: "/onePostScreen",
+      params: {
+        id: onePost.id, // Skicka med postens ID (eller andra egenskaper)
+      },
+    });
   }
 
   return (

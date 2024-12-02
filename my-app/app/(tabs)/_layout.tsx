@@ -39,9 +39,6 @@ export default function TabsLayout() {
             </Pressable>
           ),
           headerShown: true,
-          contentStyle: {
-            padding: 20,
-          },
         }}
       >
         <Tabs.Screen

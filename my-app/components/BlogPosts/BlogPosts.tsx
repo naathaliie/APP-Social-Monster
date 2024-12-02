@@ -15,11 +15,16 @@ export default function BlogPosts({ posts, overView }: BlogPostProps) {
     <View style={styles.BlogPosts}>
       <Text style={styles.headerText}>Inlägg</Text>
       <FlatList
+        style={{ maxHeight: 200 }} //ta bort
         data={reversedDirectionPosts}
+        nestedScrollEnabled
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
+        horizontal
+        /*         showsHorizontalScrollIndicator={false} // Döljer den horisontella scroll-baren
+         */ renderItem={({ item }) => (
           <BlogPostCard onePost={item} overView={overView} />
         )}
+        contentContainerStyle={{ paddingHorizontal: 10 }} // Tillval för bättre layout
       />
     </View>
   );
@@ -27,7 +32,6 @@ export default function BlogPosts({ posts, overView }: BlogPostProps) {
 
 const styles = StyleSheet.create({
   BlogPosts: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 2,
@@ -35,9 +39,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 10,
     margin: 10,
+    width: "100%",
   },
   headerText: {
     fontSize: 20,
     fontWeight: "bold",
+    marginBottom: 10,
   },
 });

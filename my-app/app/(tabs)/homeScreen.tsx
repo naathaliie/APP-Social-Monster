@@ -1,12 +1,15 @@
 import BlogPosts from "@/components/BlogPosts/BlogPosts";
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import NewBlogPostModal from "../../components/NewBlogPostModal";
 import { OneMonster } from "@/types";
+import { useRouter } from "expo-router";
 
 export default function HomeScreen() {
+  //FÖR TEST
+  const router = useRouter();
   //Hämta alla poster
   const allPosts = useSelector((state: RootState) => state.post);
   //Hämtar currensUser för newpost
@@ -14,51 +17,100 @@ export default function HomeScreen() {
     (state: RootState) => state.currentuser
   );
   return (
-    <View style={styles.HomeScreen}>
-      <NewBlogPostModal authorId={currentUser.id} position="right" />
+    <ScrollView
+      contentContainerStyle={{
+        paddingBottom: 300,
+      }}
+      nestedScrollEnabled
+    >
+      <View style={styles.container}>
+        {/* Modal för att skriva nytt inlägg */}
+        {/* <NewBlogPostModal authorId={currentUser.id} position="right" /> */}
 
-      <View style={styles.infoBox}>
-        <Image
-          source={require("../../assets/images/monsters.png")}
-          style={styles.imgStyle}
-        />
+        <View style={styles.imgContainer}>
+          <Image
+            source={require("../../assets/images/monsters.png")}
+            style={styles.imgStyle}
+          />
+        </View>
+
+        <View style={styles.contentWrapper}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <BlogPosts posts={allPosts} overView={true} />
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "plum" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
       </View>
-      <View>
-        <Text>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic velit
-          aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt officia
-          ducimus quae excepturi ullam veniam voluptate sit ratione dolores.
-        </Text>
-      </View>
-      <View>
-        <Text>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic velit
-          aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt officia
-          ducimus quae excepturi ullam veniam voluptate sit ratione dolores.
-        </Text>
-      </View>
-      <BlogPosts posts={allPosts} overView={true} />
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  HomeScreen: {
+  container: {
     flex: 1,
     alignItems: "center",
+    width: "100%",
   },
   headerText: {
     fontSize: 30,
   },
-
-  infoBox: {
+  imgContainer: {
     height: "30%",
     width: "100%",
-    alignItems: "center",
+    borderBottomWidth: 1,
   },
   imgStyle: {
     flex: 1,
-    width: "100%",
     backgroundColor: "#0553",
+  },
+  contentWrapper: {
+    margin: 15,
   },
 });
