@@ -19,7 +19,7 @@ export default function HomeScreen() {
   return (
     <ScrollView
       contentContainerStyle={{
-        paddingBottom: 300,
+        paddingBottom: 30,
       }}
       nestedScrollEnabled
     >
@@ -69,7 +69,135 @@ export default function HomeScreen() {
             </Text>
           </View>
         </View>
+
         <View style={{ padding: 20, backgroundColor: "plum" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+
+        <View style={{ padding: 20, backgroundColor: "skyblue" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "orange" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "skyblue" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "orange" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "plum" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "skyblue" }}>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+          <View>
+            <Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+              velit aut dicta deleniti, alias cumque quo iusto, ex fuga incidunt
+              officia ducimus quae excepturi ullam veniam voluptate sit ratione
+              dolores.
+            </Text>
+          </View>
+        </View>
+        <View style={{ padding: 20, backgroundColor: "orange" }}>
           <View>
             <Text>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
@@ -94,21 +222,20 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
-    width: "100%",
   },
   headerText: {
     fontSize: 30,
   },
   imgContainer: {
-    height: "30%",
-    width: "100%",
-    borderBottomWidth: 1,
+    height: 200,
+    alignItems: "center",
   },
   imgStyle: {
-    flex: 1,
+    width: "100%",
+    height: undefined,
     backgroundColor: "#0553",
+    aspectRatio: 16 / 9, // Eller ett lämpligt förhållande
   },
   contentWrapper: {
     margin: 15,
